@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio de idio junior</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+
+    <nav class="navagacao">
+        <ul class="menu">
+            <li>
+                <a href="#início" class="menu-link">início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="início" class="cabecalho">
+        <div>
+            <img src="./portifolio.png.png" alt="Foto de Idio junior" class="foto-perfil">
+            <h1>Idio junior</h1>
+            <p class="cabecalho-sub-titulo"> Desenvolvedor front-end iniciante</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá, Sou um desenvolvedor front-end iniciante e apaixonado por criar experiências web únicas e
+                memoráveis. Combino código limpo com um desing moderno para desenvolver sites que funcionam
+                perfeitamente, e impressionam visualmente.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class=" projetos-titulo">Meus projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="3.png" alt="Projeto 1" class="projetos-imagem" class=" caixa-textos-projetos">
+                <h3 class="info-projetos">Nome do projeto1</h3>
+                <p class="paragrafo-projetos">Descrição do projeto1</p>
+            </div>
+
+
+
+            <div class="projetos-card">
+                <img src="3.png" alt="Projeto 2" class="projetos-imagem" class="caixa-textos-projetos">
+                <h3 class="info-projetos">Nome do projeto2</h3>
+                <p class="paragrafo-projetos">Descrição do projeto2 </p>
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="3.png" alt="Projeto 3" class="projetos-imagem" class="caixa-textos-projetos">
+                <h3 class="info-projetos">Nome do projeto3</h3>
+                <p class="paragrafo-projetos">Descrição do projeto3</p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="nome" class=campo-form id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+<sript>
+    function enviarWhats(event) {
+        event.preventDefalt()
+
+        const nome = document.getElementById('nome').value;
+        const nome = document.getElementById('mensagem').value;
+        const telefone = '5543999273808'
+
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}`
+        const msgFormatada = encodeURIComponent(texto)
+
+        const url = `https://wa.link/{telefone}?text=${msgFormatada}`
+
+        
+
+        window.open(url, '_blank')
+     }
+
+
+</sript>
+
+</body>
+
+</html>
